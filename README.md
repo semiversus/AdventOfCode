@@ -1,0 +1,1 @@
+Solutions for all problems in [Advent of Code 2022](https://adventofcode.com/2022). Not highly optimized, but all solutions are finding a solution in seconds or max. some minutes.
