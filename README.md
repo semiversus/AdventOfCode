@@ -8,7 +8,6 @@ My solutions to [Advent of Code](https://adventofcode.com).
 ### Summary
 * Using Python (>=3.9)
 * Only python standard library, no external package
-* Each solution is self contained (not using common helper functions)
 * `solution_draft.ipynb` is the solution used for contest
 * For some puzzles a `soultion.ipynb` exists, containing a cleaned up and commented solution
 * Not highly optimized, but all solutions are finding a solution in seconds or max. some minutes.
