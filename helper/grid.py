@@ -1,6 +1,7 @@
 from typing import Any
 from collections.abc import Callable
 from functools import cached_property
+from typing import Generic, TypeVar
 
 
 UP = complex(0, -1)
@@ -14,8 +15,9 @@ FOUR_DIRECTIONS = (UP, RIGHT, DOWN, LEFT)
 TURN_LEFT = {UP: LEFT, RIGHT: UP, DOWN: RIGHT, LEFT: DOWN}
 TURN_RIGHT = {UP: RIGHT, RIGHT: DOWN, DOWN: LEFT, LEFT: UP}
 
+T = TypeVar('T')
 
-class Grid[T]:
+class Grid(Generic[T]):
     def __init__(self, cells: dict[complex, T]):
         self._cells = cells
 
@@ -39,4 +41,13 @@ class Grid[T]:
         return 0 <= position.real < self.width and 0 <= position.imag < self.height
     
     def __getitem__(self, position: complex) -> T:
-        return self._cells[position]
+        if position in self._cells:
+            return self._cells[position]
+        return None
+
+    def __setitem__(self, position: complex, value: T):
+        self._cells[position] = value
+    
+    @property
+    def cells(self):
+        return self._cells.items()
