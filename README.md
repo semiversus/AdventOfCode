@@ -3,7 +3,7 @@ My solutions to [Advent of Code](https://adventofcode.com).
 ### Events
 * [2021](./2021) wip
 * [2022](./2022) all finished
-* [2023](./2023) ongoing
+* [2023](./2023) all finished
 
 ### Summary
 * Using Python (>=3.9)
